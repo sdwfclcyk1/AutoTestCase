@@ -11,11 +11,12 @@ import unittest
 from Public.Decorator import *
 from Public.BasePage import BasePage
 from Public.ReadConfig import ReadConfig
-from  Public.SolveSensorLog import  SolveSensorLog
-from  Public.SenSorCheckPoint import SenSorCheckpoint
+from  Public.JugementSensorData import JugementSensorData
 from TestSuit_SenSorData.ExpectResult.OpenApp import  OpenApp_Expection
 
 event_name = ReadConfig().get_testEvent("打开App")
+apkpage = ReadConfig().get_pkg_name()
+apkActivity = ReadConfig().get_pkg_activity()
 
 class OpenApp(unittest.TestCase,BasePage):
 
@@ -29,31 +30,23 @@ class OpenApp(unittest.TestCase,BasePage):
    @classmethod
    @setupclass
    def tearDownClass(cls):
-       cls.d.app_stop("com.kuaikan.comic")
+       cls.d.app_stop(apkpage)
 
    @testcase
    def test_01_coldapp(self):
-        self.d.app_start("com.kuaikan.comic","com.kuaikan.comic.ui.LaunchActivity")
-        self.JugementSensorData("test_01_coldapp")
+        self.d.app_start(apkpage,apkActivity)
+        server = OpenApp_Expection()
+        JugementSensorData.JugementData("test_01_coldapp",server)
 
    @testcase
    def test_01_hotapp(self):
-       self.d.app_start("com.kuaikan.comic", "com.kuaikan.comic.ui.LaunchActivity")
+       self.d.app_start(apkpage, apkActivity)
        time.sleep(5)
-       self.d.app_stop("com.kuaikan.comic")
-       self.d.app_start("com.kuaikan.comic", "com.kuaikan.comic.ui.LaunchActivity")
+       self.d.app_stop(apkpage)
+       self.d.app_start(apkpage, apkActivity)
        server = OpenApp_Expection()
-       self.JugementSensorData("test_01_hotapp",server)
+       JugementSensorData.JugementData("test_01_hotapp",server)
 
-
-   @classmethod
-   def JugementSensorData(self,functionName,server):
-       SensorData = SolveSensorLog().getSensorLog()
-       func = getattr(server,functionName)
-       excption = func()
-       sensorResult = SenSorCheckpoint(SensorData,excption).checkPoint()
-       if len(sensorResult) > 0:
-           raise Exception("OpenApp Error" + sensorResult)
 
 
 

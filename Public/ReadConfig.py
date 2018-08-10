@@ -34,6 +34,10 @@ class ReadConfig:
         value = self.cf.get("APP", "pkg_name")
         return value
 
+    def get_pkg_activity(self):
+        value  = self.cf.get("APP", "pkg_activity")
+        return  value
+
     def get_testdata(self, name):
         value = self.cf.get("TESTDATA", name)
         return value.split('/')
@@ -42,6 +46,8 @@ class ReadConfig:
     def  get_testEvent(self,event):
         value  = self.cf.get("EVENTLIST",event)
         return  value
+
+
 
 
 
