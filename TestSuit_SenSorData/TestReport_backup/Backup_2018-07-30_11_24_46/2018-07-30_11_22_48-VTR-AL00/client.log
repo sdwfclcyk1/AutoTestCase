@@ -1,0 +1,15 @@
+2018-07-30 11:22:50,561 - VTR-AL00 - INFO - udid: SJE5T17817008328-b0:e5:ed:bc:44:c7-VTR-AL00
+2018-07-30 11:22:50,566 - VTR-AL00 - INFO - --> OpenApp.setUpClass
+2018-07-30 11:22:57,293 - VTR-AL00 - INFO - <-- OpenApp.setUpClass, Success
+
+2018-07-30 11:22:57,300 - VTR-AL00 - INFO - --> OpenApp.test_01_coldapp
+2018-07-30 11:23:39,518 - VTR-AL00 - ERROR - Exception, OpenApp ErrorFirstOpen error,PleaseCheckOutOpenWay error,PleaseCheckOut
+2018-07-30 11:23:39,519 - VTR-AL00 - ERROR - <-- OpenApp.test_01_coldapp, Exception, Error
+
+2018-07-30 11:23:39,964 - VTR-AL00 - INFO - --> OpenApp.test_01_hotapp
+2018-07-30 11:23:57,263 - VTR-AL00 - ERROR - Exception, OpenApp ErrorFirstOpen error,PleaseCheckOutOpenWay error,PleaseCheckOut
+2018-07-30 11:23:57,270 - VTR-AL00 - ERROR - <-- OpenApp.test_01_hotapp, Exception, Error
+
+2018-07-30 11:23:57,677 - VTR-AL00 - INFO - --> OpenApp.tearDownClass
+2018-07-30 11:23:58,117 - VTR-AL00 - INFO - <-- OpenApp.tearDownClass, Success
+
