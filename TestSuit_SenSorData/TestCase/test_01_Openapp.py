@@ -34,10 +34,7 @@ class OpenApp(unittest.TestCase,BasePage):
    @testcase
    def test_01_coldapp(self):
         self.d.app_start("com.kuaikan.comic","com.kuaikan.comic.ui.LaunchActivity")
-        SensorData = SolveSensorLog().getSensorLog()
-        sensorResult = SenSorCheckpoint(SensorData,OpenApp_Expection().test_01_coldapp()).checkPoint()
-        if len(sensorResult)>0:
-            raise  Exception("OpenApp Error"+sensorResult)
+        self.JugementSensorData("test_01_coldapp")
 
    @testcase
    def test_01_hotapp(self):
@@ -45,13 +42,13 @@ class OpenApp(unittest.TestCase,BasePage):
        time.sleep(5)
        self.d.app_stop("com.kuaikan.comic")
        self.d.app_start("com.kuaikan.comic", "com.kuaikan.comic.ui.LaunchActivity")
-       self.JugementSensorData("test_01_hotapp")
+       server = OpenApp_Expection()
+       self.JugementSensorData("test_01_hotapp",server)
 
 
    @classmethod
-   def JugementSensorData(self,functionName):
+   def JugementSensorData(self,functionName,server):
        SensorData = SolveSensorLog().getSensorLog()
-       server = OpenApp_Expection()
        func = getattr(server,functionName)
        excption = func()
        sensorResult = SenSorCheckpoint(SensorData,excption).checkPoint()
