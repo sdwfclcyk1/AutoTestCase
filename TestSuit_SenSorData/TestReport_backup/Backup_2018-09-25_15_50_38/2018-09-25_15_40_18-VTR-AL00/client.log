@@ -1,0 +1,9 @@
+2018-09-25 15:40:19,607 - VTR-AL00 - INFO - udid: SJE5T17817008328-b0:e5:ed:bc:44:c7-VTR-AL00
+2018-09-25 15:40:19,612 - VTR-AL00 - INFO - --> WorldPageClick.setUpClass
+2018-09-25 15:40:22,764 - VTR-AL00 - INFO - <-- WorldPageClick.setUpClass, Success
+
+2018-09-25 15:40:22,765 - VTR-AL00 - INFO - --> WorldPageClick.test_02_WordClickAttention
+2018-09-25 15:40:22,765 - VTR-AL00 - INFO - 	--> WorldPage.wait_page
+2018-09-25 15:40:24,480 - VTR-AL00 - INFO - 	--> WorldPage.Attention_Click
+2018-09-25 15:40:25,601 - VTR-AL00 - INFO - <-- WorldPageClick.test_02_WordClickAttention, Success
+

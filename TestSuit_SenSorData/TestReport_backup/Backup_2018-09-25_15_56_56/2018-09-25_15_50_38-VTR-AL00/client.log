@@ -1,0 +1,10 @@
+2018-09-25 15:50:39,328 - VTR-AL00 - INFO - udid: SJE5T17817008328-b0:e5:ed:bc:44:c7-VTR-AL00
+2018-09-25 15:50:39,333 - VTR-AL00 - INFO - --> WorldPageClick.setUpClass
+2018-09-25 15:50:42,770 - VTR-AL00 - INFO - <-- WorldPageClick.setUpClass, Success
+
+2018-09-25 15:50:42,771 - VTR-AL00 - INFO - --> WorldPageClick.test_02_WordClickAttention
+2018-09-25 15:50:42,771 - VTR-AL00 - INFO - 	--> WorldPage.wait_page
+2018-09-25 15:50:44,486 - VTR-AL00 - INFO - 	--> WorldPage.Attention_Click
+2018-09-25 15:50:56,833 - VTR-AL00 - ERROR - Exception, 'event'
+2018-09-25 15:50:56,835 - VTR-AL00 - ERROR - <-- WorldPageClick.test_02_WordClickAttention, Exception, Error
+

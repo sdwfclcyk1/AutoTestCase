@@ -1,0 +1,11 @@
+2018-09-25 15:32:46,229 - VTR-AL00 - INFO - udid: SJE5T17817008328-b0:e5:ed:bc:44:c7-VTR-AL00
+2018-09-25 15:32:46,233 - VTR-AL00 - INFO - --> WorldPageClick.setUpClass
+2018-09-25 15:32:49,885 - VTR-AL00 - INFO - <-- WorldPageClick.setUpClass, Success
+
+2018-09-25 15:32:49,885 - VTR-AL00 - INFO - --> WorldPageClick.test_02_WordClickAttention
+2018-09-25 15:32:49,886 - VTR-AL00 - INFO - 	--> WorldPage.wait_page
+2018-09-25 15:32:55,585 - VTR-AL00 - ERROR - Exception, Not in WorldPage
+2018-09-25 15:32:55,585 - VTR-AL00 - ERROR - 	<-- WorldPage.wait_page, Exception, Error
+2018-09-25 15:32:55,970 - VTR-AL00 - ERROR - Exception, IMAGE:WorldPage.wait_page-20180925153255.PNG
+2018-09-25 15:32:55,971 - VTR-AL00 - ERROR - <-- WorldPageClick.test_02_WordClickAttention, Exception, Error
+
