@@ -27,7 +27,8 @@ class WorldPageClick(unittest.TestCase,BasePage):
         cls.d.app_start(apkName,apkActivity)
     @classmethod
     def  tearDown(cls):
-        cls.d.app_stop(apkName)
+        pass
+        #cls.d.app_stop(apkName)
     @testcase
     def test_02_WordClickAttention(self):
         WorldPage().World_Click()
