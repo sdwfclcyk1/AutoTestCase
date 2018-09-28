@@ -33,10 +33,9 @@ class WorldPageClick(unittest.TestCase,BasePage):
     def test_02_WordClickAttention(self):
         WorldPage().World_Click()
         WorldPage().Attention_Click()
+        self.d.app_stop(apkName)
         server = WorldClickExpection()
         JugementSensorData.JugementData("test_01_AttentionClick", server)
-
-
 
 
 
