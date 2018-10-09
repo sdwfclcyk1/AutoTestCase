@@ -42,6 +42,9 @@ class ReadConfig:
         value = self.cf.get("TESTDATA", name)
         return value.split('/')
 
+    def get_testUserID(self):
+        value = self.cf.get("TESTDATA", "distinct_id")
+        return value
 
     def  get_testEvent(self,event):
         value  = self.cf.get("EVENTLIST",event)

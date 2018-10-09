@@ -12,26 +12,21 @@ class SenSorCheckpoint:
         self.checkpoint = checkpoint
 
     def checkPoint(self):
-        LocalSenSorData = []
-        for i  in range(0, self.sensorData.__len__())[::-1]:
-            if "\"event\":\"%s\""%(self.checkpoint["event"]) in self.sensorData[i]:
-                LocalSenSorData = self.sensorData[i];
-                break
         resultString = ""
         for key in self.checkpoint.keys():
             isInSensorData = False
             value=""
-            for i in LocalSenSorData:
-                if key=="event":
-                    break
-                if self.checkpoint[key] is False:
-                    value = "false"
-                elif self.checkpoint[key] is True:
-                    value = "true"
-                else :
-                    value = self.checkpoint[key]
-                if "\"%s\":%s"%(key,value)  in i :
-                    isInSensorData = True
-            if (isInSensorData != True)and(key!="event"):
-                resultString = resultString+"%s error,PleaseCheckOut"%(key)
+
+            if key=="event":
+                continue
+            if self.checkpoint[key] is False:
+                value = "false"
+            elif self.checkpoint[key] is True:
+                value = "true"
+            else :
+                value = self.checkpoint[key]
+            if value  == self.sensorData[key.lower()] :
+                isInSensorData = True
+            if isInSensorData != True:
+                resultString = resultString+"%s error,PleaseCheckOut"%(self.checkpoint[key])
         return  resultString
